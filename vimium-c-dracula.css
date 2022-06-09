@@ -1,0 +1,227 @@
+/*
+Dracula theme for Vimium
+by Tran Duc Binh (binhtran432k@gmail.com). This code is in the public domain.
+To use:
+  1. Copy the code.
+  2. Go to the Vimium options.
+  3. Click Show Advanced Options.
+  4. Under Advanced Options, scroll down to Custom CSS for Vimium C UI.
+  5. Paste the code in the text field.
+  6. Under Advanced Options, scroll down to Vomnibar settings.
+  7. Change the sizes variable in json like VomnibarSettings comment.
+  8. Click Save Changes.
+  9. Go to the website of your choice (or, if you have it open already, reload it) and check out the results.
+*/
+
+/* VomnibarSettings
+{
+  ...
+  "sizes": "77,3,56,0.8",
+  ...
+}
+*/
+
+/* Link hint boxes */
+.LH {
+  background: #282a36 !important;
+  font-size: 12px !important;
+  border: 0.25em solid #ffb86c;
+  border-radius: 0.34em;
+  box-shadow: 0em 0.1em 0.6em 0.1em rgba(0, 0, 0, 0.4);
+}
+
+.LH:before {
+  position: absolute;
+  background: #282a36 !important;
+  font-size: 14px !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: -1;
+}
+
+/* Link hint text */
+.D .LH {
+  color: #f8f8f2;
+  font-size: inherit;
+  text-shadow: none;
+}
+
+/* Link hint matching characters */
+.MC {
+  color: #6272a4;
+}
+
+/* HUD ("heads-up display") bar */
+.HUD.D::after {
+  background: #282a36 !important;
+  border: 1px solid #6272a4;
+}
+
+.Omnibar {
+  padding-bottom: 20px;
+}
+
+/* #omni */
+/* ^ do not touch this line ^ */
+.transparent {
+  opacity: 1;
+}
+
+body:after {
+  border: unset;
+}
+
+#bar {
+  display: block;
+  padding: 10px;
+  background-color: #6272a4;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 0px solid #bd93f9;
+}
+
+#input {
+  color: #f8f8f2;
+  font: -moz-window;
+  /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font-size: 20px;
+  height: 34px;
+  margin-bottom: 0;
+  padding: 4px;
+  background-color: #282a36;
+  border-radius: 3px;
+  border: 1px solid #6272a4;
+  box-shadow: #bd93f9 0px 0px 1px;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#input::selection {
+  background-color: #bd93f9;
+}
+
+#toolbar .button {
+  color: #6272a4;
+  background: unset;
+  cursor: pointer;
+}
+
+#toolbar .button:hover {
+  color: #f8f8f2;
+}
+
+#list {
+  background-color: #44475a;
+  border-radius: 0 0 4px 4px;
+  list-style: none;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.item {
+  border-bottom: 1px solid #6272a4;
+  line-height: 1em;
+  padding: 7px 10px;
+  font-size: 16px;
+  color: #f8f8f2;
+  position: relative;
+  display: list-item;
+  margin: auto;
+  height: 56px;
+  cursor: pointer;
+}
+
+.item::before {
+  position: absolute;
+  background: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: -1;
+}
+
+.item .bottom {
+  font-size: 15px;
+  margin-top: 3px;
+  padding: 2px 0;
+}
+
+.item a {
+  white-space: nowrap;
+  color: #50fa7b;
+}
+
+.item.s,
+.item:hover {
+  background-color: #6272a4;
+  font-weight: normal;
+  border-top: 1px solid #44475a;
+}
+
+.item .title {
+  color: #f8f8f2;
+  margin-left: 4px;
+  font-weight: normal;
+}
+
+.item match {
+  font-weight: bold;
+  color: #ffb86c;
+}
+
+.item em {
+  font-style: italic;
+}
+
+.item em match,
+.item .title > match {
+  color: #ffb86c;
+}
+
+/* #find */
+/* ^ do not touch this line ^ */
+* {
+  background: unset;
+}
+
+:host,
+body {
+  background-color: unset !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+:host(.D),
+body.D {
+  background-color: #282a36 !important;
+}
+
+.r {
+  border: none;
+  border-radius: unset;
+  box-shadow: unset;
+  background: unset;
+  height: 10px;
+}
+
+.r.D {
+  background: unset;
+  color: #d4d4d4;
+}
+
+#i {
+  color: #6272a4;
+}
+
+.D #i {
+  color: #f8f8f2;
+}
+
+.D #c {
+  color: #6272a4;
+}
